@@ -35,6 +35,6 @@ test {
 }
 
 bootJar {
-    baseName = 'java-app-for-docker-blog-post'
+    baseName = 'java-for-docker-blog-post'
     version =  '0.1.0'
 }
