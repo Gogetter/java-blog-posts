@@ -31,6 +31,7 @@ This application pings randomuser api and stores the data in an in memory databa
 ## Create a Docker Image
 
 * Run below command to create a Docker image for the application
+
     ```docker build -t dockerblogposts/java-example:apr-2020 .```
     
 ## Create a container from image
