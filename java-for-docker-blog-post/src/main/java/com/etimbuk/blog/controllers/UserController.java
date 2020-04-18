@@ -19,7 +19,7 @@ import static org.springframework.http.ResponseEntity.ok;
 import static org.springframework.util.StringUtils.isEmpty;
 
 @RestController
-@RequestMapping("/users/")
+@RequestMapping("/users")
 @RequiredArgsConstructor(onConstructor = @__({@Autowired}))
 public class UserController {
     private final UserService userService;
