@@ -4,7 +4,7 @@ This will serve as an image source for my Docker related block post
 
 ## About
 
-This application pings randomuser api and stores the data in an in memory database.
+This application pings [randomuser](https://randomuser.me/) api and stores the data in an in memory database.
 
 ## How to Use
 
@@ -24,7 +24,7 @@ This application pings randomuser api and stores the data in an in memory databa
 
     ```java -jar build/libs/java-for-docker-blog-post-0.1.0.jar```
 
-* Copy and paste below url into a browser to view returned data
+* Copy and paste below url into a browser (or Postman) to view returned data
 
     ```http://localhost:8095/api/users```
 
@@ -40,7 +40,7 @@ This application pings randomuser api and stores the data in an in memory databa
 
     ```docker run -d -p 8099:8095 --name myapp dockerblogposts/java-example:apr-2020```
 
-* Copy and paste below url into a browser to view returned data
+* Copy and paste below url into a browser (or Postman) to view returned data
 
     ```http://localhost:8099/api/users```
 
