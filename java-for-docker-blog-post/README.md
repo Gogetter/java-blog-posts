@@ -38,7 +38,7 @@ This application pings randomuser api and stores the data in an in memory databa
 
 * Run below command to create a Docker container from the just created image
 
-    ```docker run -p 8099:8095 --name myapp dockerblogposts/java-example:apr-2020```
+    ```docker run -d -p 8099:8095 --name myapp dockerblogposts/java-example:apr-2020```
 
 * Copy and paste below url into a browser to view returned data
 
