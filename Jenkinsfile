@@ -17,6 +17,5 @@ pipeline {
     }
     tools {
       gradle 'gradle6.5'
-      jdk 'jdk11'
     }
 }
