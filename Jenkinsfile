@@ -21,8 +21,9 @@ pipeline {
         stage('security checks') {
           steps {
             dir(path: 'java-for-docker-blog-post') {
-                          sh './gradlew dependencyCheckAnalyze'
-                        }
+              sh './gradlew dependencyCheckAnalyze'
+            }
+
           }
         }
 
