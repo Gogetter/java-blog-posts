@@ -12,7 +12,7 @@ pipeline {
         stage('gradle build') {
           steps {
             dir(path: 'java-for-docker-blog-post') {
-              sh './gradlew clean build -x test'
+              sh './gradlew clean build'
             }
 
           }
@@ -26,13 +26,6 @@ pipeline {
 
           }
         }
-
-        stage('Run Tests') {
-          steps {
-            echo 'On run tests'
-          }
-        }
-
       }
     }
 
