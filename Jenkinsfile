@@ -33,6 +33,6 @@ pipeline {
     }
     tools {
       gradle 'gradle6.5'
-      dependencyCheck 'dependency-check5.3.2'
+      dependency-check 'dependency-check5.3.2'
     }
 }
