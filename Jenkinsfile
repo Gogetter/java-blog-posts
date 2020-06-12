@@ -8,11 +8,12 @@ pipeline {
     }
 
     stage('build') {
-        steps {
-            dir(path: 'java-for-docker-blog-post') {
-                sh "gradle clean build -x test"
-            }
+      steps {
+        dir(path: 'java-for-docker-blog-post') {
+          sh 'gradle clean build -x test'
         }
+
+      }
     }
 
   }
