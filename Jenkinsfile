@@ -8,7 +8,6 @@ pipeline {
           parallel 'Build project' {
             sh "./gradlew clean build -x test"
           }
-          echo 'in java directory'
         }
 
       }
