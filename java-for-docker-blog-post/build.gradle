@@ -1,5 +1,5 @@
 plugins {
-    id 'org.springframework.boot' version '2.2.6.RELEASE'
+    id 'org.springframework.boot' version '2.3.0.RELEASE'
     id 'io.spring.dependency-management' version '1.0.9.RELEASE'
     id 'com.google.cloud.tools.jib' version '1.8.0'
     id 'java'
@@ -55,7 +55,7 @@ dependencyCheck {
     // set up a quality gate for vulnerabilities with high severity level:
     //   let's consider that a vulnerability has a high severity level if its CVSS score is higher than 7
     //   the build is going to fail if vulnerabilities with high severity level found
-    failBuildOnCVSS = 10
+    failBuildOnCVSS = 7
 
     // specify a list of known issues which contain:
     //   false-positives
