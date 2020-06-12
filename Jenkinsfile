@@ -28,4 +28,7 @@ pipeline {
     }
 
   }
+  tools {
+    gradle 'gradle6.5'
+  }
 }
