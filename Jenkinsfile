@@ -10,9 +10,10 @@ pipeline {
     stage('build') {
       steps {
         dir(path: 'java-for-docker-blog-post') {
-          withEnv(["JAVA_HOME=${ tool 'jdk11' }", "PATH+GRADLE=${tool 'gradle6.5'}:${env.JAVA_HOME}/bin"]) {
-                    sh "gradle clean build -x test"
-                  }
+          withEnv(overrides: ["JAVA_HOME=${ tool 'jdk11' }", "PATH+GRADLE=${tool 'gradle6.5'}:${env.JAVA_HOME}/bin"]) {
+            sh 'gradle clean build -x test'
+          }
+
         }
 
       }
