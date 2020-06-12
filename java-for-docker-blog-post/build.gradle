@@ -4,6 +4,7 @@ plugins {
     id 'com.google.cloud.tools.jib' version '1.8.0'
     id 'java'
     id 'org.owasp.dependencycheck' version '5.3.2.1'
+    id 'checkstyle'
 }
 
 apply plugin: 'org.owasp.dependencycheck'
@@ -20,6 +21,12 @@ configurations {
 
 repositories {
     mavenCentral()
+}
+
+checkstyle {
+    maxWarnings = 0
+    toolVersion = "8.25"
+    configDirectory.set(file("$rootDir/config/checkstyle"))
 }
 
 dependencies {
@@ -40,6 +47,13 @@ test {
 bootJar {
     baseName = 'java-for-docker-blog-post'
     version =  '0.1.0'
+}
+
+tasks.withType(Checkstyle) {
+    reports {
+        xml.enabled false
+        html.enabled true
+    }
 }
 
 // OWASP Dependency Check settings
