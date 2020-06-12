@@ -7,9 +7,9 @@ pipeline {
       }
     }
 
-    stage('build') {
+    stage('build application') {
       parallel {
-        stage('build') {
+        stage('gradle build') {
           steps {
             dir(path: 'java-for-docker-blog-post') {
               sh 'gradle clean build -x test'
