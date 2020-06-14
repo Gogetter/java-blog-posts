@@ -9,7 +9,7 @@ pipeline {
 
     stage('build application') {
       parallel {
-        stage('gradle build (clean, test, check') {
+        stage('gradle build (clean, test, check)') {
           steps {
             dir(path: 'java-for-docker-blog-post') {
               sh('./gradlew clean build')
