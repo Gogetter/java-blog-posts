@@ -45,8 +45,8 @@ test {
 }
 
 bootJar {
-    baseName = 'java-for-docker-blog-post'
-    version =  '0.1.0'
+    archiveBaseName.set('java-for-docker-blog-post')
+    archiveVersion.set('0.1.0')
 }
 
 tasks.withType(Checkstyle) {
