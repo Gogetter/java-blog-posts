@@ -2,12 +2,10 @@ plugins {
     id 'org.springframework.boot' version '2.3.0.RELEASE'
     id 'io.spring.dependency-management' version '1.0.9.RELEASE'
     id 'com.google.cloud.tools.jib' version '1.8.0'
-    id 'java'
-    id 'org.owasp.dependencycheck' version '5.3.2.1'
+    id 'java' apply(true)
+    id 'org.owasp.dependencycheck' version '5.3.2.1' apply(true)
     id 'checkstyle'
 }
-
-apply plugin: 'org.owasp.dependencycheck'
 
 group = 'com.etimbuk.blog'
 version = '0.0.1-SNAPSHOT'
